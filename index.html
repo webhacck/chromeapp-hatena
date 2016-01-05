@@ -2,14 +2,14 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>はてぶカウンター</title>
+    <title>はてブコメント取得デモ</title>
     <link rel="stylesheet" href="style.css">
-    <script src="angular.min.js"></script>
-    <script src="main.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/main.js"></script>
 </head>
 <body ng-app="myApp">
     <header id="header">
-        <h1 class="header-text">はてぶカウンター</h1>
+        <h1 class="header-text">はてブコメント取得デモ</h1>
     </header>
     <section id="main">
         <div ng-controller="mainCtrl">
@@ -17,7 +17,7 @@
             <p class="main-count">{{result}}</p>
             <ul class="main-comment">
                 <p class="main-comment-title">コメント一覧</p>
-                <li class="main-comment-text" ng-repeat="comment in comments track by $index">{{comment}}</li>
+                <li class="main-comment-text" ng-repeat="comment in comments">{{comment}}</li>
             </ul>
         </div>
     </section>
