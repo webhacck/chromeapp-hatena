@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>はてぶカウンター</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="angular.min.js"></script>
+    <script src="main.js"></script>
+</head>
+<body ng-app="myApp">
+    <header id="header">
+        <h1 class="header-text">はてぶカウンター</h1>
+    </header>
+    <section id="main">
+        <div ng-controller="mainCtrl">
+            <button class="main-btn" ng-click="getUrl()">取得開始</button>
+            <p class="main-count">{{result}}</p>
+            <ul class="main-comment">
+                <p class="main-comment-title">コメント一覧</p>
+                <li class="main-comment-text" ng-repeat="comment in comments track by $index">{{comment}}</li>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>
